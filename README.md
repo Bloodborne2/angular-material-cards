@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Aplicação Angular
 
 ## Instruções
@@ -47,6 +46,4 @@ Implementar lógica completa de CRUD com formulários reativos.
 ![image](https://github.com/user-attachments/assets/f8ab1d9b-d8fe-4ed3-abf8-b77049cc192f)
 ![image](https://github.com/user-attachments/assets/b6d9db95-81fc-4703-acfc-0eac072ba178)
 ![image](https://github.com/user-attachments/assets/e1006be0-1ead-4b57-81c8-50a5819a7fa4)
-
->>>>>>> 98a6ea5d1c06bd15bbe2e869046db620f865eb49
 
