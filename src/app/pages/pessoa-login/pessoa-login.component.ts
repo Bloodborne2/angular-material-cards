@@ -15,20 +15,19 @@ export class PessoaLoginComponent {
   senha = ''
   botaoDesabilitado: boolean = true;
 
-  constructor(private router:Router){ }
+  constructor(private router: Router) { }
 
   onBotaoClicado() {
 
-    if(this.login.trim() !== '' && this.senha.trim() !== ''){
-      
-      if(this.login == 'admin' && this.senha == '123'){
-        alert(`Bem-vindo ${this.login} !`)
-        this.router.navigate(['/pessoas'])
-      }else{
-        alert(`Dados Inválidos`)
-      } 
+    if (this.login.trim() !== '' && this.senha.trim() !== '') {
+      if (this.login === 'admin' && this.senha === '123') {
+        alert(`Bem-vindo ${this.login} !`);
+        this.router.navigate(['/pessoa-listagem']); 
+      } else {
+        alert(`Dados Inválidos`);
+      }
     }
-    else{
+    else {
       alert(`Preencha ambos os campos!`)
     }
   }
