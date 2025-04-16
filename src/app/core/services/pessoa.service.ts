@@ -1,28 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Pessoa } from './types/types';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PessoaService {
+  private readonly API = 'http://localhost:3000/pessoas'
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  listar(): Pessoa[] {
-    return [
-      {
-        id: 1,
-        nome: "Enzo",
-        sobrenome: "Silva",
-        dtNascimento: "2005-01-10",
-      },
-      {
-        id: 2,
-        nome: "Valentina",
-        sobrenome: "Guimaraes",
-        dtNascimento: "2007-08-14",
-      },
-    ];
-
+  listar(): Observable<Pessoa[]> {
+    return this.http.get<Pessoa[]>(this.API)
   }
+  incluir(pessoa: Pessoa): Observable<Pessoa> {
+    return this.http.post<Pessoa>(this.API, pessoa)
+  }
+  editar(pessoa: Pessoa): Observable<Pessoa> {
+    const url = `${this.API}/${pessoa.id}`
+    return this.http.put<Pessoa>(url, pessoa)
+  }
+  buscarPorId(id: number): Observable<Pessoa | undefined> {
+    return this.http.get<Pessoa>(this.API + `/${id}`);
+  }
+
+  excluir(id: number): Observable<Pessoa> {
+    return this.http.delete<Pessoa>(this.API + `/${id}`);
+  }
+
 }

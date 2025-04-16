@@ -14,8 +14,10 @@ export class HeaderComponent {
   itensMenu = [
     { label: 'Home', link: '' },
     { label: 'Login', link: '/pessoas/login' },
+    { label: 'Cadastro', link: 'pessoa/incluir' },
     { label: 'Sobre', link: '/sobre' },
     { label: 'Ajuda', link: '/ajuda' }
+    
   ]
 
 }
