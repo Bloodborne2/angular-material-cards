@@ -1,49 +1,61 @@
-# Aplicação Angular
+# Projeto Angular - CRUD com API e Funcionalidades Dinâmicas
 
-## Instruções
-Navegue pelas branchs do repositório para acessar o conteúdo de cada aula
-=======
-# Projeto Angular - Login + Página de CRUD Estático
-
-Este é um projeto Angular simples com duas páginas principais:
-
-- **Página de Login**: Tela inicial onde o usuário pode inserir login e senha.
-- **Página de Listagem de Pessoas (CRUD Estático)**: Página acessível após login bem-sucedido, com botões de ação (ainda não funcionais).
+Este é um projeto Angular com funcionalidades de **CRUD dinâmico**, integrado com uma API mock usando **json-server** para gerenciar a lista de pessoas.
 
 ---
 
-## ✅ Funcionalidades
+## 🚀 Funcionalidades
 
-### 🔐 Login
-- Acesso permitido apenas com as credenciais:
-  - **Usuário:** `admin`
-  - **Senha:** `123`
-- Após o login correto, o usuário é redirecionado automaticamente para a página de listagem.
+### 🔐 Tela de Login
+- **Funcionalidade**: Acesso restrito com login e senha.
+- **Credenciais**:
+  - Usuário: `admin`
+  - Senha: `123`
+- **Comportamento**: Redirecionamento automático para a página de listagem de pessoas após login bem-sucedido.
 
 ### 👥 Página de Listagem de Pessoas
-- Página acessível após login.
-- Interface com botões de:
-  - **Adicionar**
-  - **Editar**
-  - **Excluir**
-
-> ⚠️ Estes botões são **ainda não funcionais** e servem como estrutura base para implementação futura de um CRUD completo.
+- **Funcionalidade**: Exibe uma lista de pessoas com as opções de **Adicionar**, **Editar** e **Excluir**.
+- **Interações**:
+  - **Adicionar**: Adiciona uma nova pessoa à lista.
+  - **Editar**: Atualiza os dados de uma pessoa já existente.
+  - **Excluir**: Remove uma pessoa da lista.
+  - As ações de **Adicionar**, **Editar** e **Excluir** são totalmente funcionais, interagindo com a API para manter a lista de pessoas atualizada.
 
 ---
 
-✨ Tecnologias Utilizadas
+## ⚙️ Como Funciona
 
-Angular
+### 🚀 API com json-server
+- **Descrição**: A API é uma simulação de um servidor backend usando `json-server`, permitindo realizar operações **CRUD**.
+- **Configuração da API**:
+  - **URL**: `http://localhost:3000/pessoas`
+  - **Métodos**:
+    - `GET /pessoas`: Retorna todas as pessoas.
+    - `POST /pessoas`: Adiciona uma nova pessoa.
+    - `PUT /pessoas/:id`: Atualiza os dados de uma pessoa.
+    - `DELETE /pessoas/:id`: Exclui uma pessoa específica.
 
-TypeScript
+### 🔄 Funcionalidades Implementadas
+- **Adicionar** uma pessoa.
+- **Editar** os dados de uma pessoa, acessando a página de alteração com a rota `/pessoa/alterar/:id`.
+- **Excluir** uma pessoa da lista, removendo-a diretamente da API e atualizando a visualização.
 
-HTML5 + CSS3
+---
 
-🔧 Próximos Passos
-Implementar lógica completa de CRUD com formulários reativos.
+## 📦 Tecnologias Utilizadas
+
+- **Angular**: Framework para construção da interface do usuário e gerenciamento da aplicação.
+- **TypeScript**: Linguagem utilizada para a escrita do código.
+- **json-server**: Ferramenta que cria uma API REST mock para simulação de backend.
+- **HTML5 + CSS3**: Para a estruturação e estilo das páginas.
+  
+---
 
 📸 Prints
-![image](https://github.com/user-attachments/assets/f8ab1d9b-d8fe-4ed3-abf8-b77049cc192f)
-![image](https://github.com/user-attachments/assets/b6d9db95-81fc-4703-acfc-0eac072ba178)
-![image](https://github.com/user-attachments/assets/e1006be0-1ead-4b57-81c8-50a5819a7fa4)
+![image](https://github.com/user-attachments/assets/e6fe66ba-353a-4c39-8ec6-411e4409311d)
+![image](https://github.com/user-attachments/assets/8f260ed6-eb5b-40bb-aab4-14e4e31f1a34)
+![image](https://github.com/user-attachments/assets/e36febd8-7e45-449d-a0de-85ace6f52e50)
+
+
+
 
