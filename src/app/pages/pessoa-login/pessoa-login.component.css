@@ -3,10 +3,10 @@
   flex-direction: column;
   width: 20%;
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 100px;
   text-align: left;
   padding: 24px;
-  background-color: #f8f9fa;
+  background-color: #eaeaea;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   animation: fadeIn 0.6s ease-in-out;
@@ -29,7 +29,7 @@
 
 /* Formulário */
 form {
-  width: 100%;
+  width: 90%;
   padding: 20px;
   margin: 24px auto;
   display: flex;
