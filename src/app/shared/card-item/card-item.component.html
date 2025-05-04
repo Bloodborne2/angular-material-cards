@@ -1,0 +1,21 @@
+<div *ngFor="let img of imagens">
+  <mat-card class="custom-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="custom-header-image"></div>
+      <mat-card-title>Produto</mat-card-title>
+      <mat-card-subtitle>Marca</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="img" alt="Imagem do Produto" />
+
+    <mat-card-content>
+      <p>Descrição do produto aqui.</p>
+      <p class="price-tag">R$ 249,90</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-flat-button color="primary">COMPRAR</button>
+      <button mat-stroked-button color="accent">DETALHES</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

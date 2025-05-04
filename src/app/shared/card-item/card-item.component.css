@@ -1,0 +1,62 @@
+.custom-card {
+  max-width: 400px;
+  border: 1px solid #ccc;
+  background: linear-gradient(
+    to bottom right,
+    #1e1f4b,
+    #5e60ce,
+    #adb5bd
+  ); /* azul escuro, roxo, prata */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.custom-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+
+.custom-card:hover {
+  transform: scale(1.02);
+}
+
+.custom-header-image {
+  background-image: url("https://via.placeholder.com/40?text=T");
+  background-size: cover;
+  background-position: center;
+}
+
+.mat-card-title,
+.mat-card-subtitle {
+  color: #e0e0f8;
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c5cfff;
+  margin-top: 10px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button[mat-flat-button] {
+  background-color: #4361ee;
+  color: white;
+}
+
+button[mat-stroked-button] {
+  border-color: #b0b0ff;
+  color: #d0d0ff;
+}

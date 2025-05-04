@@ -1,0 +1,72 @@
+// Custom Theming for Angular Material
+@use "@angular/material" as mat;
+
+// Core styles
+@include mat.core();
+
+// === Custom Palette ===
+$custom-primary: mat.define-palette(
+  (
+    50: #e1e2ed,
+    100: #b3b5d2,
+    200: #8083b5,
+    300: #4d5198,
+    400: #2a2f83,
+    500: #1e1f4b,
+    // Azul escuro
+    600: #1a1b44,
+    700: #16163a,
+    800: #111230,
+    900: #0a0a20,
+    contrast: (
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  )
+);
+
+$custom-accent: mat.define-palette(
+  (
+    50: #edeffe,
+    100: #c4c7f7,
+    200: #a3a4f1,
+    300: #7c7deb,
+    400: #605de7,
+    500: #5e60ce,
+    // Roxo médio
+    600: #554fc2,
+    700: #483da8,
+    800: #3b2e8e,
+    900: #29176b,
+    contrast: (
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  ),
+ 
+
+);
+
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+// === Define theme ===
+$angularcrud-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// === Apply the theme ===
+@include mat.all-component-themes($angularcrud-theme);
